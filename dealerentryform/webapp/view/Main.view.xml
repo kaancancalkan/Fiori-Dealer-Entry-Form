@@ -1,0 +1,67 @@
+<mvc:View controllerName="vol1.dealerentryform.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:fiori="sap.ui.webc.fiori" xmlns:form="sap.ui.layout.form">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <f:Form id="FormDisplay354" editable="false">
+                    <f:title>
+                        <core:Title text="Dealer Entry Form" />
+                    </f:title>
+                    <f:layout>
+                        <f:ResponsiveGridLayout labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" />
+                    </f:layout>
+                    <f:formContainers>
+                        <f:FormContainer>
+                            <f:formElements>
+                                <f:FormElement label="Dealer Code">
+                                    <f:fields>
+                                        <!-- <MaskInput value="{main>/DealerCode}" mask="CCCC-CCCC-CCCC-CCCC-CCCC" placeholderSymbol="_" placeholder="Enter digits and capital letters" showClearIcon="{/showClearIcon}">
+                                            <rules>
+                                                <MaskInputRule maskFormatSymbol="C" regex="[A-Z0-9]" />
+                                            </rules>
+                                        </MaskInput> -->
+                                        <Input id="productInput" value="{main>/DealerCode}" placeholder="Enter dealer code" showSuggestion="true" showValueHelp="true" valueHelpRequest=".onValueHelpRequest" />
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement label="RC">
+                                    <MultiComboBox selectionChange="handleSelectionChange" value="{main>/RC}" selectionFinish="handleSelectionFinish" width="350px">
+                                        <!-- <core:Item key="001" text="RC01" />
+                                        <core:Item key="002" text="RC02" /> -->
+                                    </MultiComboBox>
+                                </f:FormElement>
+                                <f:FormElement label="Cordinator">
+                                    <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="350px">
+                                        <core:Item key="001" text="Bill Gates " />
+                                        <core:Item key="002" text="Muhammed Ali" />
+                                    </MultiComboBox>
+                                </f:FormElement>
+                                <f:FormElement label="Country">
+                                    <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="350px">
+                                        <core:Item key="001" text="Turkey" />
+                                        <core:Item key="002" text="Israel" />
+                                        <core:Item key="003" text="Syria" />
+                                        <core:Item key="004" text="Egypt" />
+                                        <core:Item key="005" text="Iraq" />
+                                        <core:Item key="006" text="Greece" />
+                                    </MultiComboBox>
+                                </f:FormElement>
+                                <f:FormElement label="Approval Status">
+                                    <RadioButtonGroup id="rbg3" columns="5" valueState="Information" class="sapUiMediumMarginBottom">
+                                        <RadioButton id="RB3-1" text="Approved" />
+                                        <RadioButton id="RB3-2" text="Rejected " />
+                                        <RadioButton id="RB3-3" text="Waiting" />
+                                    </RadioButtonGroup>
+                                </f:FormElement>
+                            </f:formElements>
+                        </f:FormContainer>
+                    </f:formContainers>
+                </f:Form>
+            </VBox>
+        </content>
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer />
+                <Button class="Btn" press="onButtonPress" activeIcon="" ariaHasPopup="None" enabled="true" icon="empty string" iconDensityAware="true" iconFirst="true" text="Send" textDirection="Inherit" type="Emphasized" width="8%" />
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>
