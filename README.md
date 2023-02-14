@@ -1,7 +1,6 @@
 # Fiori-Dealer-Entry-Form
 Dealer Entry Form Fiori UI5
 
-To See Screen 
 
 At Terminal Type npm install
 
